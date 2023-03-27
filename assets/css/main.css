@@ -68,21 +68,27 @@ body {
   margin: 20px;
 }
 
-main {
-  margin-bottom: 120px;
-}
-
 h1 {
   font-size: 22px;
   font-weight: 300;
   color: hsl(0, 0%, 59%);
   margin: 20px;
 }
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+}
 
 h2 {
   font-size: 12px;
   font-weight: 300;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
 }
 
 .title .logo {
@@ -108,6 +114,15 @@ h2 {
   padding-left: 30px;
   box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
 }
+@media screen and (min-width: 768px) {
+  .form input {
+    width: 35%;
+    margin: 0 20px;
+    font-size: 16px;
+    height: 56px;
+    border-radius: 28px;
+  }
+}
 .form #btn {
   color: hsl(0, 0%, 100%);
   background-color: hsl(223, 87%, 63%);
@@ -115,13 +130,38 @@ h2 {
   font-weight: 600;
   box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.23);
 }
+@media screen and (min-width: 768px) {
+  .form #btn {
+    width: 15%;
+    font-size: 16px;
+    height: 56px;
+    border-radius: 28px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 
 .dashboard {
   margin: 72px auto 120px;
 }
+@media screen and (min-width: 768px) {
+  .dashboard {
+    display: flex;
+    margin-bottom: 72px;
+  }
+}
 .dashboard img {
   width: 90vw;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .dashboard img {
+    width: 50vw;
+  }
 }
 
 footer {
@@ -133,6 +173,11 @@ footer .icons {
   width: 36vw;
   margin: 30px auto;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  footer .icons {
+    width: 10vw;
+  }
 }
 footer .icons i {
   width: 20px;
@@ -153,6 +198,11 @@ footer .copyright {
   font-weight: 300;
   color: hsl(0, 0%, 59%);
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  footer .copyright {
+    font-size: 12px;
+  }
 }
 footer .attribution {
   font-size: 11px;
