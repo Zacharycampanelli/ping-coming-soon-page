@@ -16,14 +16,15 @@ main {
 }
 
 h1 {
+  font-size: 22px;
   font-weight: 300;
   color: $gray;
   margin: 20px;
 }
 
 h2 {
-  font-weight: 300;
   font-size: 12px;
+  font-weight: 300;
   margin-bottom: 40px;
 }
 
@@ -31,8 +32,12 @@ h2 {
   @extend %flex-centered-cols;
 
   .logo {
-    width: 15%;
+    width: 56px;
     margin: 80px auto 30px;
+
+    @include screen-desktop {
+      width: 7.5vw;
+    }
   }
 
   #soon {
@@ -46,9 +51,13 @@ h2 {
 
   input {
     @extend %circular;
+    font-size: 12px;
+    font-weight: 300;
     color: $paleblue;
     border: $paleblue 1px solid;
     margin-bottom: 10px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
   }
 
   #btn {
@@ -71,26 +80,35 @@ h2 {
 }
 
 footer {
-    position: relative;
-    padding-bottom: 20px;    
+  position: relative;
+  padding-bottom: 20px;
   .icons {
     display: flex;
-    width: 40%;
+    width: 36vw;
     margin: 30px auto;
     text-align: center;
 
     i {
-      width: 32px;
+      width: 20px;
       font-size: 20px;
-      margin: 0 15px;
+      margin: 0 auto;
       color: $blue;
+    }
+
+    .circle {
+      height: 32px;
+      width: 32px;
+      border: 1px solid $paleblue;
+      border-radius: 50%;
+      display: inline-block;
+      padding-top: 5px;
     }
   }
 
   .copyright {
+    font-size: 10px;
     font-weight: 300;
     color: $gray;
-    font-size: 10px;
     text-align: center;
   }
 

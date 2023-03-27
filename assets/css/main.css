@@ -73,20 +73,26 @@ main {
 }
 
 h1 {
+  font-size: 22px;
   font-weight: 300;
   color: hsl(0, 0%, 59%);
   margin: 20px;
 }
 
 h2 {
-  font-weight: 300;
   font-size: 12px;
+  font-weight: 300;
   margin-bottom: 40px;
 }
 
 .title .logo {
-  width: 15%;
+  width: 56px;
   margin: 80px auto 30px;
+}
+@media screen and (min-width: 768px) {
+  .title .logo {
+    width: 7.5vw;
+  }
 }
 .title #soon {
   font-weight: 700;
@@ -94,9 +100,13 @@ h2 {
 }
 
 .form input {
+  font-size: 12px;
+  font-weight: 300;
   color: hsl(223, 100%, 88%);
   border: hsl(223, 100%, 88%) 1px solid;
   margin-bottom: 10px;
+  padding-left: 30px;
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
 }
 .form #btn {
   color: hsl(0, 0%, 100%);
@@ -120,20 +130,28 @@ footer {
 }
 footer .icons {
   display: flex;
-  width: 40%;
+  width: 36vw;
   margin: 30px auto;
   text-align: center;
 }
 footer .icons i {
-  width: 32px;
+  width: 20px;
   font-size: 20px;
-  margin: 0 15px;
+  margin: 0 auto;
   color: hsl(223, 87%, 63%);
 }
+footer .icons .circle {
+  height: 32px;
+  width: 32px;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 50%;
+  display: inline-block;
+  padding-top: 5px;
+}
 footer .copyright {
+  font-size: 10px;
   font-weight: 300;
   color: hsl(0, 0%, 59%);
-  font-size: 10px;
   text-align: center;
 }
 footer .attribution {
