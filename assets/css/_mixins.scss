@@ -1,0 +1,12 @@
+%circular {
+    border-radius: 20px;
+    width: 85%;
+    height: 40px;
+}
+
+%flex-centered-cols { 
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
