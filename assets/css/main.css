@@ -138,6 +138,9 @@ h2 {
     border-radius: 28px;
   }
 }
+.form #btn:hover {
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
   .form {
     flex-direction: row;
@@ -185,6 +188,10 @@ footer .icons i {
   margin: 0 auto;
   color: hsl(223, 87%, 63%);
 }
+footer .icons i:hover {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
 footer .icons .circle {
   height: 32px;
   width: 32px;
@@ -192,6 +199,11 @@ footer .icons .circle {
   border-radius: 50%;
   display: inline-block;
   padding-top: 5px;
+}
+footer .icons .circle:hover {
+  background: hsl(223, 87%, 63%);
+  border-color: hsl(223, 87%, 63%);
+  cursor: pointer;
 }
 footer .copyright {
   font-size: 10px;

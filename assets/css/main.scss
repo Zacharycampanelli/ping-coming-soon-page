@@ -26,7 +26,7 @@ h2 {
   font-size: 12px;
   font-weight: 300;
   margin-bottom: 40px;
-  
+
   @include screen-desktop {
     font-size: 20px;
   }
@@ -53,7 +53,6 @@ h2 {
 .form {
   @extend %flex-centered-cols;
 
-  
   input {
     @extend %circular;
     font-size: 12px;
@@ -65,7 +64,7 @@ h2 {
     box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
 
     @include screen-desktop {
-      width:35%;
+      width: 35%;
       margin: 0 20px;
       font-size: 16px;
       height: 56px;
@@ -87,6 +86,10 @@ h2 {
       height: 56px;
       border-radius: 28px;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   @include screen-desktop {
@@ -103,22 +106,20 @@ h2 {
     margin-bottom: 72px;
   }
 
-
   img {
     width: 90vw;
     margin: 0 auto;
-  
-  @include screen-desktop {
-    width: 50vw;
-  }
 
+    @include screen-desktop {
+      width: 50vw;
+    }
   }
-
 }
 
 footer {
   position: relative;
   padding-bottom: 20px;
+
   .icons {
     display: flex;
     width: 36vw;
@@ -134,6 +135,10 @@ footer {
       font-size: 20px;
       margin: 0 auto;
       color: $blue;
+      &:hover {
+        color: $white;
+        cursor: pointer;
+      }
     }
 
     .circle {
@@ -143,6 +148,12 @@ footer {
       border-radius: 50%;
       display: inline-block;
       padding-top: 5px;
+
+      &:hover {
+        background: $blue;
+        border-color: $blue;
+        cursor: pointer;
+      }
     }
   }
 
