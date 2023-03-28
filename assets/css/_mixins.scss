@@ -1,9 +1,16 @@
+@mixin placeholder
+{
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}  
+}
+
 %circular {
     border-radius: 20px;
     width: 85%;
     height: 40px;
 }
-
 
 %flex-centered-cols { 
     display: flex;

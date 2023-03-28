@@ -16,10 +16,11 @@
         <h1>We are launching <span id="soon">soon!</span></h1>
         <h2>Subscribe and get notified</h2>
       </div>
-      <div class="form">
-        <input type="text" id="email" name="email" value="Your email address..." />
-        <button id="btn">Notify Me</button>
-      </div>
+      <form id="form">
+        <input type="text" id="email" name="email" placeholder="Your email address..." />
+        <div id="error"></div>
+        <button type="submit" id="btn">Notify Me</button>
+      </form>
       <div class="dashboard">
         <img src="./assets/images/illustration-dashboard.png" alt="dashboard illustration" />
       </div>
@@ -27,9 +28,9 @@
     </main>
     <footer>
       <div class="icons">
-      <i class="fa-brands fa-facebook-f circle"></i>
-      <i class="fa-brands fa-twitter circle"></i>
-      <i class="fa-brands fa-instagram circle "></i>
+      <div class="icon-item"><a href="#"><i class="fa-brands fa-facebook-f circle"></i></a></div>
+      <div class="icon-item"><a href="#"><i class="fa-brands fa-twitter circle"></i></a></div>
+      <div class="icon-item"><a href="#"><i class="fa-brands fa-instagram circle "></i></a></div>
       </div>
       <div class="copyright">&copy; Copyright Ping. All rights reserved.</div>
       
@@ -39,6 +40,6 @@
         <a href="#">Zachary Campanelli</a>
       </p>
     </footer>
-
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

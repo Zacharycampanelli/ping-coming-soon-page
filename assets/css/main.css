@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
-.form #btn, .form input {
+#form #btn, #form input {
   border-radius: 20px;
   width: 85%;
   height: 40px;
 }
 
-.form, .title {
+#form, .title {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -105,17 +105,21 @@ h2 {
   color: hsl(209, 33%, 12%);
 }
 
-.form input {
+#form {
+  position: relative;
+  width: 100%;
+}
+#form input {
   font-size: 12px;
   font-weight: 300;
   color: hsl(223, 100%, 88%);
   border: hsl(223, 100%, 88%) 1px solid;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   padding-left: 30px;
   box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
 }
 @media screen and (min-width: 768px) {
-  .form input {
+  #form input {
     width: 35%;
     margin: 0 20px;
     font-size: 16px;
@@ -123,7 +127,35 @@ h2 {
     border-radius: 28px;
   }
 }
-.form #btn {
+#form input::-webkit-input-placeholder {
+  color: hsl(223, 100%, 88%);
+}
+#form input:-moz-placeholder {
+  color: hsl(223, 100%, 88%);
+}
+#form input::-moz-placeholder {
+  color: hsl(223, 100%, 88%);
+}
+#form input:-ms-input-placeholder {
+  color: hsl(223, 100%, 88%);
+}
+#form .error-border {
+  border: hsl(354, 100%, 67%) 1px solid;
+}
+#form #error {
+  color: hsl(354, 100%, 67%);
+  font-size: 10px;
+  font-weight: 400;
+  position: absolute;
+  top: 45px;
+}
+@media screen and (min-width: 768px) {
+  #form #error {
+    top: 60px;
+    left: 22vw;
+  }
+}
+#form #btn {
   color: hsl(0, 0%, 100%);
   background-color: hsl(223, 87%, 63%);
   font-size: 12px;
@@ -131,21 +163,24 @@ h2 {
   box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.23);
 }
 @media screen and (min-width: 768px) {
-  .form #btn {
+  #form #btn {
     width: 15%;
     font-size: 16px;
     height: 56px;
     border-radius: 28px;
   }
 }
-.form #btn:hover {
+#form #btn:hover {
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .form {
+  #form {
     flex-direction: row;
     justify-content: center;
   }
+}
+#form .text-black {
+  color: hsl(209, 33%, 12%);
 }
 
 .dashboard {
@@ -179,20 +214,20 @@ footer .icons {
 }
 @media screen and (min-width: 768px) {
   footer .icons {
-    width: 10vw;
+    width: 15vw;
   }
 }
-footer .icons i {
-  width: 20px;
-  font-size: 20px;
+footer .icons .icon-item {
   margin: 0 auto;
+}
+footer .icons .icon-item a:visited {
   color: hsl(223, 87%, 63%);
 }
-footer .icons i:hover {
+footer .icons .icon-item a:hover {
   color: hsl(0, 0%, 100%);
   cursor: pointer;
 }
-footer .icons .circle {
+footer .icons .icon-item .circle {
   height: 32px;
   width: 32px;
   border: 1px solid hsl(223, 100%, 88%);
@@ -200,7 +235,7 @@ footer .icons .circle {
   display: inline-block;
   padding-top: 5px;
 }
-footer .icons .circle:hover {
+footer .icons .icon-item .circle:hover {
   background: hsl(223, 87%, 63%);
   border-color: hsl(223, 87%, 63%);
   cursor: pointer;
@@ -217,7 +252,7 @@ footer .copyright {
   }
 }
 footer .attribution {
-  font-size: 11px;
+  font-size: 10px;
   text-align: center;
   position: absolute;
   bottom: 0;
